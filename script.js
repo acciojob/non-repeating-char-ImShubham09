@@ -1,8 +1,6 @@
 function firstNonRepeatedChar(str) {
  // Write your code here
-	  let input = str.split("");
-  let res = "";
-
+ let input = str.split("");
   for (let i = 0; i < input.length; i++) {
     let isRepeated = false;
     for (let j = 0; j < input.length; j++) {
@@ -12,13 +10,10 @@ function firstNonRepeatedChar(str) {
       }
     }
     if (!isRepeated) {
-      res = input[i];
-      break; // Stop at the first non-repeated character
+      return input[i]; // Return the character directly
     }
   }
-
-  return res ? `First non-repeated character is: ${res}` : "No non-repeated character found";
-	
+  return null;
 }
 const input = prompt("Enter a string");
 alert(firstNonRepeatedChar(input)); 
